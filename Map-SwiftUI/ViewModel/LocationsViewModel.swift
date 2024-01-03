@@ -18,6 +18,7 @@ class LocationsViewModel: ObservableObject{
 //    @Published var mapRegion = MapCameraPosition.region(MKCoordinateRegion())
     @Published var mapRegion = MKCoordinateRegion()
     @Published var isShowingLocationList = false
+    @Published var showSheetLocation: Location? = nil
     
     init(){
         let locations = LocationsDataService.locations

@@ -11,6 +11,7 @@ import MapKit
 struct LocationsView: View {
     
     @EnvironmentObject private var vm: LocationsViewModel
+//    @State private var aboutLocation: Location?
     var body: some View {
         ZStack{
             
@@ -42,6 +43,8 @@ struct LocationsView: View {
                         }
                     }
                 }
+            }.sheet(item: $vm.showSheetLocation) { location in
+                LocationDetailView(location: location)
             }
         }
     }

@@ -9,6 +9,7 @@ import SwiftUI
 
 struct LocationPreviewView: View {
     @EnvironmentObject private var vm: LocationsViewModel
+//    @Binding var aboutLocation: Location?
     var location: Location
     var body: some View {
         HStack(alignment:.bottom){
@@ -19,7 +20,7 @@ struct LocationPreviewView: View {
             
             VStack(spacing: 15){
                 Button(action: {
-                    
+                    vm.showSheetLocation = location
                 }, label: {
                     CustomeButton(title: "Learn more")
                 })
